@@ -3,13 +3,12 @@ layout: page
 title: About
 permalink: /about/
 ---
-
-Some information about you!
+I am graphic designer and editorial designer. and practice to be web designer, web developer.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+[portfolio: graphic, printed, motion picture works](https://seunghaekim.github.io/portfolio/2016KIMSEUNGHAE-PORTFOLIO.ed1.pdf)
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[aka.seungahekim@gmail.com](mailto:aka.seungahekim@gmail.com)
