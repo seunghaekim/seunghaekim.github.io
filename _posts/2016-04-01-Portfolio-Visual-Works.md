@@ -7,18 +7,18 @@ updated: 2016-04-01 12:00
 
 [preview]
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web.jpg)
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web3.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot3.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web3.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web3.jpg)
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web5.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot5.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web5.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web5.jpg)
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web7.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot7.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web7.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web7.jpg)
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web8.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot8.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web8.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web8.jpg)
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web14.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot14.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web14.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web14.jpg)
 
-![2016KIMSEUNGHAE-PORTFOLIO.ed1_web15.jpg]({{ site.url }}/assets/post/2016-04-01/screenshot15.jpg)
+![2016KIMSEUNGHAE-PORTFOLIO.ed1_web15.jpg]({{ site.url }}/assets/post/2016-04-01/2016KIMSEUNGHAE-PORTFOLIO.ed1_web15.jpg)
 
 - go to download [PDF](https://drive.google.com/file/d/0BwX3IkmWXfXlN0tMQklja2plbjA/view?usp=sharing)
