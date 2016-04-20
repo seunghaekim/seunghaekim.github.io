@@ -1,16 +1,10 @@
 #header{
-  width: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 1;
   margin: 10px;
-  opacity: 0.8;
   color: DarkSlateGray;
-}
-
-#header:hover{
-  opacity: 1;
 }
 
 #header h1{
@@ -20,6 +14,25 @@
 
 #header p{
   font-size: 10px;
+}
+
+#header p, h1{
+    opacity: 0.8;
+}
+
+#header h1:hover{
+  opacity: 1;
+}
+#header a:link{
+  color: black;
+}
+
+#header a:hover{
+  color: black;
+}
+
+#header a:visited{
+  color: DarkGray;
 }
 
 #gallery{
