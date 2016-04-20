@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>jQuery Photo Wall</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./zoomwall.js-master/zoomwall.css" />
+  <script type="text/javascript" src="./zoomwall.js-master/zoomwall.js"></script>
+
+
+</head>
+
+<body>
+  <div id="header">
+    <h1>Seung-hae KIM Image Retouch Works<h1>
+      <p>
+        Copyright(c)2015-2016 by socksappeal. All pictures are property of socksappeal.
+      </p>
+  </div>
+  <div id="gallery" class="zoomwall">
+    <script>
+    for(var i = 1; i < 117; i++){
+      document.write('<img src=\"./img/img-'+i+'_small.jpg\" data-highres=\"./img/img-'+i+'_large.jpg\" alt="Copyright(c)2015-2016 by socksappeal. All pictures are property of socksappeal"/>');
+    };
+    </script>
+  </div>
+  <script>
+  window.onload = function() {
+    zoomwall.create(
+      document.getElementById('gallery')
+    );
+  };
+  </script>
+</body>
+</html>
