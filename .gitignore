@@ -1,10 +1,17 @@
 .sass-cache
 node_modules
 package.json
+
 .BridgeLabelsAndRatings
+vendor
+_config.yml
+_site
+.bundle
 
 # Windows
 Thumbs.db
 
 # Mac
 .DS_Store
+_config.yml
+_config.yml
