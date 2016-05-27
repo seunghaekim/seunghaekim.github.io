@@ -4,7 +4,6 @@ package.json
 
 .BridgeLabelsAndRatings
 vendor
-_config.yml
 _site
 .bundle
 
@@ -13,5 +12,3 @@ Thumbs.db
 
 # Mac
 .DS_Store
-_config.yml
-_config.yml
