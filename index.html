@@ -2,17 +2,39 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<article>
+  <div class="posts">
+    <div class="work-portfolio">
+      {% for post in site.posts %}
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      {% endfor %}
+    </div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.content }}
+    <div class="work-information">
+      <div class="work-title">
+        <h1>{{ site.name }}</h1>
       </div>
 
-      <!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> -->
-    </article>
-  {% endfor %}
-</div>
+      <div class="work-metadata">
+        <ul>
+        {% for post in site.posts %}
+            {% for cat in post.categories %}
+              {% assign catArray = cat_Array | push: cat %}
+            {% endfor %}
+        {% endfor %}
+        {{ catArray | size }}
+        </ul>
+      </div>
+
+      <div class="work-material">
+
+      </div>
+
+      <div class="work-external">
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>

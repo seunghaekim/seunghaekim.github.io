@@ -1,6 +1,6 @@
 ---
 title: hand-out logotype
-categories: "logo design"
+categories: [logo design]
 # roll:
 client: "hand-out"
 # co-work: "대전 문화협동조합"
@@ -10,4 +10,5 @@ client: "hand-out"
 color: Black and White
 # binding: saddle-stitching
 tool: ["Adobe Illustrator CS6"]
+layout: post
 ---

@@ -1,6 +1,6 @@
 ---
 title: Artshop 21 Logotype
-categories: "logo design"
+categories: [logo design]
 # roll:
 client: "아트샵 이십일"
 # co-work: "대전 문화협동조합"
@@ -10,4 +10,5 @@ client: "아트샵 이십일"
 color: Black and White
 # binding: saddle-stitching
 tool: ["Adobe Illustrator CS6"]
+layout: post
 ---

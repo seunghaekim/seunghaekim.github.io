@@ -1,6 +1,6 @@
 ---
-title: gtsz.rcp logotype
-categories: "logo design"
+title: [gtsz.rcp logotype]
+categories: [logo design]
 # roll:
 client: "gtsz.rcp"
 # co-work: "대전 문화협동조합"
@@ -10,4 +10,5 @@ client: "gtsz.rcp"
 color: Black and White
 # binding: saddle-stitching
 tool: ["Adobe Illustrator CS6"]
+layout: post
 ---
