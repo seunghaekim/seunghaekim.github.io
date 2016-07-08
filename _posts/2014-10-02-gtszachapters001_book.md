@@ -8,6 +8,6 @@ size: A5
 amount: 48
 color: grayscale
 binding: saddle-stitching
-tool: ["Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe InDesign CS6"]
+tools: ["Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe InDesign CS6"]
 layout: post
 ---

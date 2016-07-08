@@ -6,7 +6,6 @@
 //
 
 @import "reset";
-@import "variables";
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 // Syntax highlighting @import is at the bottom of this file
 
@@ -30,6 +29,10 @@ h1 {
   line-height: 120%;
 }
 
+ol li {
+  margin-bottom: 0.7em;
+}
+
 $total-height: 97vh;
 $total-width: 97vw;
 $bottom-height: $total-height/5;
@@ -43,6 +46,11 @@ article {
   height: $total-height;
   margin: 1vw;
   width: $total-width;
+
+  .front-page {
+    column-width: 2*($total-width/5);
+    column-fill: auto;
+  }
 
   .work-portfolio {
     height: $main-height;

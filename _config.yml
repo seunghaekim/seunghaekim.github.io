@@ -15,7 +15,6 @@ description: Graphic Designer, Printed Matters, trainning for web designer
 #
 # Flags below are optional
 #
-array = []
 # Includes an icon in the footer for each username you enter
 footer-links:
   #dribbble:
@@ -27,11 +26,14 @@ footer-links:
   #linkedin:
   #pinterest:
   rss: seunghaekim.github.io
-  #twitter: jekyllrb
-  #stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  #youtube: # channel/<your_long_string> or user/<user-name>
-  #googleplus: # anything in your profile username that comes after plus.google.com/
 
+classifications:
+  - tools
+  - date
+  - color
+  - roll
+  - co-work
+  - size
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account

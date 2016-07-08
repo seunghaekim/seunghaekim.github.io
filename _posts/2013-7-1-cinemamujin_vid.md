@@ -14,6 +14,6 @@ duration: 1m 30s
 frame-rate: 29.97
 color: color
 # binding: saddle-stitching
-tool: ["Adobe Premiere Pro CS6", "Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe Aution CS6"]
+tools: ["Adobe Premiere Pro CS6", "Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe Aution CS6"]
 layout: post
 ---

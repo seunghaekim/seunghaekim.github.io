@@ -4,10 +4,12 @@ layout: default
 
 <article>
   <div class="posts">
-    <div class="work-portfolio">
-      {% for post in site.posts %}
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      {% endfor %}
+    <div class="work-portfolio front-page">
+      <ol>
+        {% for post in site.posts %}
+          <li><h1 class="upcase"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
+        {% endfor %}
+      </ol>
     </div>
 
     <div class="work-information">
@@ -17,17 +19,18 @@ layout: default
 
       <div class="work-metadata">
         <ul>
-        {% for post in site.posts %}
-            {% for cat in post.categories %}
-              {% assign catArray = cat_Array | push: cat %}
-            {% endfor %}
-        {% endfor %}
-        {{ catArray | size }}
+          {% for cat in site.categories %}
+            <li><strong class="upcase">{{ cat[0] }}</strong></li>
+          {% endfor %}
         </ul>
       </div>
 
       <div class="work-material">
-
+        <ul>
+          {% for tool in site.tools %}
+            {{ tool | first }}
+          {% endfor %}
+        </ul>
       </div>
 
       <div class="work-external">
@@ -35,6 +38,7 @@ layout: default
 
         </ul>
       </div>
+    </div>
     </div>
   </div>
 </article>
