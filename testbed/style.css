@@ -1,0 +1,113 @@
+/*article, div {border: solid lightgray 0.1em;}*/
+
+/*basic elements*/
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+h1 {
+    font-size: 170%;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+body {
+    margin: 0.2em;
+    font-family: 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    line-height: 120%;
+    font-size: 100%;
+}
+
+ol li {
+    margin-bottom: 0.7em;
+}
+
+.posts {
+    margin-top: 0.2em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0.2em;
+    width: 100%;
+    height: 100vh;
+}
+
+/* tools */
+.col-spanX1 {
+    width: 20%;
+}
+
+.col-spanX2 {
+    width: 40%;
+}
+
+.row-spanX1 {
+    height: 20%;
+}
+
+.row-spanX4 {
+    height: 80%;
+}
+
+.upcase {
+    text-transform: uppercase;
+}
+
+.strong {
+    font-weight:600;
+}
+
+/*work portfolio section*/
+
+.work-portfolio {
+    overflow: auto;
+}
+
+.front-page {
+    column-width: 20em;
+    column-fill: auto;
+}
+
+.gallery-contents img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-contents {
+    max-width: 100%;
+}
+
+/* work information section */
+
+.work-information {
+    z-index:1;
+    width: 100%;
+}
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 1.5%;
+    text-transform:capitalize;
+}
+
+.footer ul li::after {
+    content: " / ";
+}
+
+.footer ul li:last-child::after {
+    content: none;
+}
+
+.work-information div {
+    padding: 0.5em;
+}
