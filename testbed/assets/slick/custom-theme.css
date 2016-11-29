@@ -1,0 +1,32 @@
+.slick-slide {
+    height: 78vh;
+}
+
+.slick-slide img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin-left: 0.5em;
+}
+
+ul.slick-dots {
+    position: relative;
+    bottom: 3.8em;
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ul.slick-dots li button {background: none;border: none;}
+
+.slick-dots li {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.2em;
+    margin-left: 0.2em;
+    border: 1px solid black;
+    border-radius: 100%;
+    background-color: black;
+}

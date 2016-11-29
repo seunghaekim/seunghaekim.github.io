@@ -10,7 +10,7 @@ h1 {
 }
 
 body {
-    margin: 0.2em;
+    margin: 0em;
     font-family: 'Noto Sans Korean', sans-serif;
     font-weight: 300;
     line-height: 120%;
@@ -21,30 +21,31 @@ ol li {
     margin-bottom: 0.7em;
 }
 
+article {
+    margin: 1em;
+}
+
 .posts {
-    margin-top: 0.2em;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 0.2em;
-    width: 100%;
+    width: calc(100vw - 50px);
     height: 100vh;
+    margin: 1em;
 }
 
 /* tools */
 .col-spanX1 {
-    width: 20%;
+    width: 20vw;
 }
 
 .col-spanX2 {
-    width: 40%;
+    width: 40vw;
 }
 
 .row-spanX1 {
-    height: 20%;
+    height: 20vh;
 }
 
 .row-spanX4 {
-    height: 80%;
+    height: 80vh;
 }
 
 .upcase {
@@ -58,22 +59,17 @@ ol li {
 /*work portfolio section*/
 
 .work-portfolio {
-    overflow: auto;
+    overflow: hidden;
 }
 
 .front-page {
     column-width: 20em;
     column-fill: auto;
 }
-
-.gallery-contents img {
-    width: 100%;
-    height: auto;
-}
-
+/*
 .gallery-contents {
     max-width: 100%;
-}
+}*/
 
 /* work information section */
 
