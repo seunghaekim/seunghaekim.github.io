@@ -12,9 +12,9 @@
     <!-- fullpage.js -->
     <link rel="stylesheet" type="text/css" href="assets/fullPage.js-master/jquery.fullPage.css" />
     <script type="text/javascript" src="assets/fullPage.js-master/jquery.fullPage.js"></script>
+
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
-    // Add the new slick-theme.css if you want the default styling
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/custom-theme.css"/>
 
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 
@@ -571,7 +571,20 @@
          </div>
     </div>
 
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.gallery-contents').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+        });
+      });
+    </script>
 </body>
 
 </html>
