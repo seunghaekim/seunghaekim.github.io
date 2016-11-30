@@ -3,12 +3,6 @@
 /*basic elements*/
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
-h1 {
-    font-size: 170%;
-    font-weight: 700;
-    line-height: 120%;
-}
-
 body {
     margin: 0em;
     font-family: 'Noto Sans Korean', sans-serif;
@@ -17,93 +11,77 @@ body {
     font-size: 100%;
 }
 
-ol li {
-    margin-bottom: 0.7em;
+h1 {
+    font-size: 2.2em;
+    line-height: normal;
+    font-weight: 800;
 }
 
-article {
-    margin: 1em;
-}
+/*utilities*/
 
-.posts {
-    width: calc(100vw - 50px);
-    height: 100vh;
-    margin: 1em;
-}
-
-/* tools */
-.col-spanX1 {
-    width: 20vw;
-}
-
-.col-spanX2 {
-    width: 40vw;
-}
-
-.row-spanX1 {
-    height: 20vh;
-}
-
-.row-spanX4 {
-    height: 80vh;
-}
-
-.upcase {
-    text-transform: uppercase;
-}
-
-.strong {
-    font-weight:600;
-}
-
-/*work portfolio section*/
-
-.work-portfolio {
+.--row-spanX1 {
+    height: calc((98vh/5)*1);
     overflow: hidden;
 }
 
+.--row-spanX4 {
+    height: calc((98vh/5)*4);
+    overflow: hidden;
+}
+
+.--col-spanX1 {
+    width: calc((98vw/5)*1);
+}
+
+.--col-spanX2 {
+    width: calc((98vw/5)*2);
+}
+
+.--onemargin {
+    margin: 0.5em;
+}
+
+.--halfmargin {
+    margin: 0.5em;
+}
+
+.--upcase {
+    text-transform: uppercase;
+}
+
+.--strong {
+    font-weight:500;
+}
+
+/*front page*/
 .front-page {
-    column-width: 20em;
-    column-fill: auto;
+    column-width: calc((98vh/5)*5);
 }
-/*
-.gallery-contents {
-    max-width: 100%;
-}*/
 
-/* work information section */
 
-.work-information {
-    z-index:1;
-    width: 100%;
-}
+/*footer*/
 
 .footer {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
+    display: -webkit-inline-box;
+    display: inline-flex;
 }
 
-.footer ul {
-    list-style: none;
+.footer h1 {
+    line-height:1.3em;
 }
 
 .footer ul li {
     display: inline;
-    margin-right: 1.5%;
-    text-transform:capitalize;
 }
 
-.footer ul li::after {
-    content: " / ";
+.footer ul li::after{
+    content: "/";
+    font-weight: 500;
+    margin-left:0.2em;
+    margin-right:0.2em;
+    color: red;
 }
 
-.footer ul li:last-child::after {
+.footer ul li:last-child::after{
     content: none;
-}
-
-.work-information div {
-    padding: 0.5em;
 }
