@@ -6,99 +6,92 @@
 //
 
 @import "reset";
+
+/*basic elements*/
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
-// Syntax highlighting @import is at the bottom of this file
 
 body {
-  font-family: 'Noto Sans Korean', sans-serif;
-  font-weight: 300;
-  line-height: 120%;
-}
-
-strong {
-  font-weight: 500;
-}
-
-.upcase {
-  text-transform: uppercase;
+    margin: 0em;
+    font-family: 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    line-height: 120%;
+    font-size: 100%;
 }
 
 h1 {
-  font-size: 170%;
-  font-weight: 700;
-  line-height: 120%;
+    font-size: 2.2em;
+    line-height: normal;
+    font-weight: 800;
 }
 
-ol li {
-  margin-bottom: 0.7em;
-}
+/*utilities*/
 
-$total-height: 97vh;
-$total-width: 97vw;
-$bottom-height: $total-height/5;
-$main-height: 4*($total-height/5);
-
-.player .video-wrapper {
-  background: none;
-}
-
-article {
-  height: $total-height;
-  margin: 1vw;
-  width: $total-width;
-
-  .front-page {
-    column-width: 2*($total-width/5);
-    column-fill: auto;
-  }
-
-  .work-portfolio {
-    height: $main-height;
-    width: 100%;
+.--row-spanX1 {
+    height: calc((98vh/5)*1);
     overflow: hidden;
-    // overflow: hidden;
-
-    .collage {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  .work-information {
-    height: $bottom-height;
-    width: 100%;
-    top: 100%;
-    bottom: 0;
-    display: flex;
-
-    ul li {
-      display: inline;
-      margin-right: 1.5%;
-    }
-
-    li::after {
-      content: " / ";
-      color: red;
-      font-weight: bold;
-    }
-
-    li:last-child::after {
-      content: none;
-    }
-
-    .work-title {
-      width: 40vw;
-      padding: 0.5vmax;
-    }
-
-    .work-metadata, .work-material, .work-external {
-      width: $total-width/5;
-      padding: 0.5vmax;
-    }
-  }
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+.--row-spanX4 {
+    height: calc((98vh/5)*4);
+    overflow: hidden;
+}
+
+.--col-spanX1 {
+    width: calc((98vw/5)*1);
+}
+
+.--col-spanX2 {
+    width: calc((98vw/5)*2);
+}
+
+.--onemargin {
+    margin: 0.5em;
+}
+
+.--halfmargin {
+    margin: 0.5em;
+}
+
+.--upcase {
+    text-transform: uppercase;
+}
+
+.--strong {
+    font-weight:500;
+}
+
+/*front page*/
+.front-page {
+    column-width: calc((98vh/5)*5);
+}
+
+
+/*footer*/
+
+.footer {
+    display: -webkit-inline-box;
+    display: inline-flex;
+}
+
+.footer h1 {
+    line-height:1.3em;
+}
+
+.footer ul li {
+    display: inline;
+}
+
+.footer ul li::after{
+    content: "/";
+    font-weight: 500;
+    margin-left:0.2em;
+    margin-right:0.2em;
+    color: red;
+}
+
+.footer ul li:last-child::after{
+    content: none;
+}
+
 @import "highlights";
 @import "svg-icons";

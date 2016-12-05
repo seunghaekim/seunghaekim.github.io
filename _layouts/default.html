@@ -2,9 +2,20 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/ed-lea-jquery-collagePlus-2085c67/jquery.collagePlus.js"></script>
 
+    <link href="{{ site.baseurl }}/style.css" rel="stylesheet" type="text/css">
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+    <!-- fullpage.js -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/fullPage.js-master/jquery.fullPage.css" />
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/fullPage.js-master/jquery.fullPage.js"></script>
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/slick/custom-theme.css"/>
+
+      <script type="text/javascript" src="{{ site.baseurl }}/assets/js/scripts.js"></script>
     {% include meta.html %}
 
     <!--[if lt IE 9]>
@@ -20,5 +31,21 @@
   <body>
   {{ content }}
   {% include analytics.html %}
+
+  <!-- slick setting -->
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.gallery-contents').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true
+      });
+    });
+  </script>
   </body>
 </html>

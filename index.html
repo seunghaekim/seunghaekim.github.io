@@ -2,43 +2,8 @@
 layout: default
 ---
 
-<article>
-  <div class="posts">
-    <div class="work-portfolio front-page">
-      <ol>
-        {% for post in site.posts %}
-          <li><h1 class="upcase"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
-        {% endfor %}
-      </ol>
-    </div>
-
-    <div class="work-information">
-      <div class="work-title">
-        <h1>{{ site.name }}</h1>
-      </div>
-
-      <div class="work-metadata">
-        <ul>
-          {% for cat in site.categories %}
-            <li><strong class="upcase">{{ cat[0] }}</strong></li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="work-material">
-        <ul>
-          {% for tool in site.tools %}
-            {{ tool | first }}
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="work-external">
-        <ul>
-
-        </ul>
-      </div>
-    </div>
-    </div>
-  </div>
-</article>
+<div id="fullpage">
+    {% for post in site.posts %}
+        <div class="section">{{ post }}</div>
+    {% endfor %}
+</div>

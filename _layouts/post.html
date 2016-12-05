@@ -2,95 +2,99 @@
 layout: default
 ---
 
-<article class="post">
-<div class="work-portfolio">
-  {% if page.external contains "vimeo" %}
-    {% assign vimeolink = page.external | split:"/" %}
-    <iframe src="{{ vimeolink[0] }}//player.{{ vimeolink[1] }}{{ vimeolink[2] }}/video/{{ vimeolink[3] }}?byline=0&title=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  {% endif %}
 
-  {% if page.external contains "youtube" %}
-    {% assign youtubeLink = page.external | split:"=" %}
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{ youtubeLink[1] }}" frameborder="0" allowfullscreen></iframe>
-  {% endif %}
-
-  {% if page.features %}
-    {% assign num=page.features.size %}
-      {% for i in (0..num)) %}
-        <img src="{{ site.baseurl }}/{{ page.features[i] }}" />
-      {% endfor %}
-  {% endif %}
-</div>
-
-<div class="work-information">
-  <div class="work-title">
-    <h1>{{ page.title }}</h1>
-  </div>
-
-  <div class="work-metadata">
-    <ul>
-      {% if page.categories %}
-        <li><strong class="upcase">{{ page.categories | join: ", " | capitalize }}</strong></li>
-      {% endif %}
-
-      {% if page.roll %}
-        <li><strong class="upcase">ROLL: </strong>{{ page.roll | join: ", " | capitalize }}</li>
-      {% endif %}
-
-      {% if page.date %}
-        <li><strong class="upcase">DATE: </strong>{{ page.date | date: "%B, %Y" }}</li>
-      {% endif %}
-
-      {% if page.client %}
-        <li><STRONG class="upcase">CLIENT: </STRONG>{{ page.client | join: ", " | capitalize }}</li>
-      {% endif %}
-
-      {% if page.co-work %}
-        <li><STRONG class="upcase">co-work: </STRONG>{{ page.co-work | join: ", " | capitalize }}</li>
-      {% endif %}
-    </ul>
-  </div>
-
-  <div class="work-material">
-    <ul>
-      {% if page.size %}
-      <li><strong class="upcase">size:</strong> {{ page.size  | join: ", " | capitalize }}
-        {% if page.amount %}
-        , {{ page.amount }} pages
+    <!-- 포트폴리오 본문 -->
+    <div class="work-portfolio --row-spanX4 --onemargin">
+        <!-- 비메오 링크일 경우 -->
+        {% if page.external contains "vimeo" %}
+          {% assign vimeolink = page.external | split:"/" %}
+          <iframe src="{{ vimeolink[0] }}//player.{{ vimeolink[1] }}{{ vimeolink[2] }}/video/{{ vimeolink[3] }}?byline=0&title=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         {% endif %}
-      </li>
-      {% endif %}
 
-      {% if page.duration %}
-      <li><strong class="upcase">duration:</strong> {{ page.duration  | join: ", " | capitalize }}</li>
-      {% endif %}
+        <!-- 유투브 링크일 경우 -->
+        {% if page.external contains "youtube" %}
+            {% assign youtubeLink = page.external | split:"=" %}
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{ youtubeLink[1] }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
 
-      {% if page.frame-rate %}
-      <li><strong class="upcase">Frame rate:</strong> {{ page.frame-rate  | join: ", " | capitalize }}</li>
-      {% endif %}
+        {% if page.features %}
+        <div class="gallery-contents">
+            {% assign num=page.features.size %}
+            {% for i in (0..num)) %}
+                <div><img src="{{ site.baseurl }}/{{ page.features[i] }}" /></div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
 
-      {% if page.color %}
-      <li><strong class="upcase">color:</strong> {{ page.color | join: ", " }}</li>
-      {% endif %}
+    <!-- 추가 정보 -->
+    <div class="work-information footer --row-spanX1 --onemargin">
+        <!-- 작업물 제목 -->
+        <div class="work-title --col-spanX2 --halfmargin">
+            <h1>{{ page.title }}</h1>
+        </div>
 
-      {% if page.binding %}
-      <li><strong class="upcase">binding:</strong> {{ page.binding }}</li>
-      {% endif %}
+        <!-- 작업물 메타데이터 -->
+        <div class="work-metadata --col-spanX1 --halfmargin">
+            <ul>
+                {% if page.categories %}
+                  <li><span class="--upcase --strong">{{ page.categories | join: ", " | capitalize }}</span></li>
+                {% endif %}
 
-      {% if page.tools %}
-      <li><strong class="upcase">tools:</strong> {{ page.tools | join: ", " | capitalize }}</li>
-      {% endif %}
-    </ul>
-  </div>
+                {% if page.roll %}
+                  <li><span class="--upcase --strong">ROLL: </span>{{ page.roll | join: ", " | capitalize }}</li>
+                {% endif %}
 
-  <div class="work-external">
-    <ul>
-      {% if page.external %}
-      <li><strong class="upcase">external links: </strong><a href="{{ page.external }}">{{ page.external }}</a></li>
-      {% endif %}
-    </ul>
-  </div>
-</div>
+                {% if page.date %}
+                  <li><span class="--upcase --strong">DATE: </span>{{ page.date | date: "%B, %Y" }}</li>
+                {% endif %}
 
+                {% if page.client %}
+                  <li><span class="--upcase --strong">CLIENT: </span>{{ page.client | join: ", " | capitalize }}</li>
+                {% endif %}
 
-</article>
+                {% if page.co-work %}
+                  <li><span class="--upcase --strong">co-work: </span>{{ page.co-work | join: ", " | capitalize }}</li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="work-material --col-spanX1 --halfmargin">
+            <ul>
+                {% if page.size %}
+                <li><span class="--upcase --strong">size:</span>
+                    {{ page.size  | join: ", " | capitalize }}
+                    {% if page.amount %}, {{ page.amount }} pages {% endif %}
+                </li>
+                {% endif %}
+
+                {% if page.duration %}
+                <li><span class="--upcase --strong">duration:</span> {{ page.duration  | join: ", " | capitalize }}</li>
+                {% endif %}
+
+                {% if page.frame-rate %}
+                <li><span class="--upcase --strong">Frame rate:</span> {{ page.frame-rate  | join: ", " | capitalize }}</li>
+                {% endif %}
+
+                {% if page.color %}
+                <li><span class="--upcase --strong">color:</span> {{ page.color | join: ", " }}</li>
+                {% endif %}
+
+                {% if page.binding %}
+                <li><span class="--upcase --strong">binding:</span> {{ page.binding }}</li>
+                {% endif %}
+
+                {% if page.tools %}
+                <li><span class="--upcase --strong">tools:</span> {{ page.tools | join: ", " | capitalize }}</li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="work-external --col-spanX1 --halfmargin">
+            <ul>
+                {% if page.external %}
+                <li><span class="--upcase --strong">external links: </span><a href="{{ page.external }}">{{ page.external }}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
