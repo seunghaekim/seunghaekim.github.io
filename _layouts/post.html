@@ -20,7 +20,7 @@ layout: default
         {% if page.features %}
         <div class="gallery-contents">
             {% assign num=page.features.size %}
-            {% for i in (0..num)) %}
+            {% for i in (1..num)) %}
                 <div><img src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ page.features[i] }}" /></div>
             {% endfor %}
         </div>
