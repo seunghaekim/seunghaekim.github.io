@@ -9,6 +9,6 @@ client: "아트샵 이십일"
 # amount: 44
 color: Black and White
 # binding: saddle-stitching
-tools: ["Adobe Illustrator CS6"]
+tools: ["Ai CS6"]
 layout: post
 ---

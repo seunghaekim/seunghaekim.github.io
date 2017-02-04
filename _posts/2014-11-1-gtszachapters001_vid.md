@@ -11,7 +11,7 @@ duration: 30s
 frame-rate: 23.976
 color: color
 # binding: saddle-stitching
-tools: ["Adobe Premiere Pro CS6", "Adobe After Effect CS6", "Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe Aution CS6"]
+tools: ["Adobe Pr CS6", "Adobe Ae CS6", "Adobe Ps CS6", "Ai CS6", "Adobe Au CS6"]
 layout: post
 external: https://vimeo.com/111107307
 ---

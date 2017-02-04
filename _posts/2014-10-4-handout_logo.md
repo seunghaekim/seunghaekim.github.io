@@ -9,6 +9,10 @@ client: "hand-out"
 # amount: 44
 color: Black and White
 # binding: saddle-stitching
-tools: ["Adobe Illustrator CS6"]
+tools: ["Ai CS6"]
 layout: post
+features:
+    - handout_logo_01.jpg
+    - handout_logo_02.jpg
+    - handout_logo_03.jpg
 ---

@@ -9,6 +9,6 @@ size: A4
 amount: 44
 color: CMYK
 binding: saddle-stitching
-tools: ["Adobe Photoshop CS6", "Adobe Lightroom CC", "Adobe Illustrator CS6", "Adobe InDesign CS6"]
+tools: ["Adobe Ps CS6", "Adobe Lr CC", "Ai CS6", "Adobe Id CS6"]
 layout: post
 ---

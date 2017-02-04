@@ -8,6 +8,10 @@ size: A5
 amount: 48
 color: grayscale
 binding: saddle-stitching
-tools: ["Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe InDesign CS6"]
+tools: ["Adobe Ps CS6", "Ai CS6", "Adobe Id CS6"]
 layout: post
+features:
+    - achapters001_00.jpg
+    - achapters001_01.jpg
+    - achapters001_02.jpg
 ---

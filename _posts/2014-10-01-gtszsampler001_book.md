@@ -8,14 +8,11 @@ size: A5
 amount: 4
 color: grayscale
 binding: bi-fold
-tools: ["Adobe Photoshop CS6", "Adobe Illustrator CS6", "Adobe InDesign CS6"]
+tools: ["Adobe Ps CS6", "Ai CS6", "Adobe Id CS6"]
 layout: post
 features:
-  - assets/temp/8d5.png
-  - assets/temp/frank-gehry.jpg
-  - assets/temp/Fuck-You-Im-Batman.jpg
-  - assets/temp/fuck-you-lip-tattoo.jpg
-  - assets/temp/maxresdefault.jpg
-  - assets/temp/photo-82.jpg
-  - assets/temp/super-model-09-12x9.jpg
+  - sampler001_00.jpg
+  - sampler001_01.jpg
+  - sampler001_02.jpg
+  - sampler001_03.jpg
 ---

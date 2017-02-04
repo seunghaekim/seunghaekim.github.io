@@ -21,7 +21,7 @@ layout: default
         <div class="gallery-contents">
             {% assign num=page.features.size %}
             {% for i in (0..num)) %}
-                <div><img src="{{ site.baseurl }}/{{ page.features[i] }}" /></div>
+                <div><img src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ page.features[i] }}" /></div>
             {% endfor %}
         </div>
         {% endif %}

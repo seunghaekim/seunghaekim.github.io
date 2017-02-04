@@ -15,7 +15,7 @@ duration:
 frame-rate: 29.9
 color: color
 # binding: saddle-stitching
-tools: ["Adobe Premiere Pro CS6", "Adobe After Effect CS6", "Adobe Photoshop CS6", "Adobe Illustrator CS6"]
+tools: ["Adobe Pr CS6", "Adobe Ae CS6", "Adobe Ps CS6", "Ai CS6"]
 layout: post
 external: https://www.youtube.com/watch?v=B8sdEizB9Kw
 ---
