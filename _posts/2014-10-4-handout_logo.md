@@ -1,15 +1,9 @@
 ---
 title: hand-out logotype
-categories: [logo design]
-# roll:
-client: "hand-out"
-# co-work: "대전 문화협동조합"
-# publisher: "대전 문화협동조합"
-# size: A4
-# amount: 44
+categories: logo design
+client: hand-out
 color: Black and White
-# binding: saddle-stitching
-tools: ["Ai CS6"]
+tools: Ai CS6
 layout: post
 features:
     - handout_logo_01.jpg

@@ -1,14 +1,15 @@
 ---
 title: Artshop 21 Logotype
-categories: [logo design]
-# roll:
+categories: logo design
 client: "아트샵 이십일"
-# co-work: "대전 문화협동조합"
-# publisher: "대전 문화협동조합"
-# size: A4
-# amount: 44
 color: Black and White
-# binding: saddle-stitching
-tools: ["Ai CS6"]
+tools:
+    - Ai CS6
 layout: post
+features:
+    - artshop21_00.jpg
+    - artshop21_01.jpg
+    - artshop21_02.jpg
+    - artshop21_03.jpg
+    - artshop21_04.jpg
 ---
