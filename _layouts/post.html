@@ -2,9 +2,10 @@
 layout: default
 ---
 
+<div class="container-fluid post">
 
     <!-- 포트폴리오 본문 -->
-    <div class="work-portfolio --row-spanX4 --onemargin">
+    <div class="work-portfolio row">
         <!-- 비메오 링크일 경우 -->
         {% if page.external contains "vimeo" %}
           {% assign vimeolink = page.external | split:"/" %}
@@ -18,24 +19,25 @@ layout: default
         {% endif %}
 
         {% if page.features %}
-        <div class="gallery-contents">
-            {% assign num=page.features.size %}
-            {% for i in (1..num)) %}
-                <div><img src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ page.features[i] }}" /></div>
+        <div class="gallery">
+            {% for item in page.features %}
+                <div class="artwork">
+                    <img src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ item }}" />
+                </div>
             {% endfor %}
         </div>
         {% endif %}
     </div>
 
     <!-- 추가 정보 -->
-    <div class="work-information footer --row-spanX1 --onemargin">
+    <div class="work-information row">
         <!-- 작업물 제목 -->
-        <div class="work-title --col-spanX2 --halfmargin">
+        <div class="work-title col-md-6">
             <h1>{{ page.title }}</h1>
         </div>
 
         <!-- 작업물 메타데이터 -->
-        <div class="work-metadata --col-spanX1 --halfmargin">
+        <div class="work-metadata col-md-3">
             <ul>
                 {% if page.categories %}
                   <li><span class="--upcase --strong">{{ page.categories | join: ", " | capitalize }}</span></li>
@@ -59,7 +61,7 @@ layout: default
             </ul>
         </div>
 
-        <div class="work-material --col-spanX1 --halfmargin">
+        <div class="work-material col-md-3">
             <ul>
                 {% if page.size %}
                 <li><span class="--upcase --strong">size:</span>
@@ -98,3 +100,4 @@ layout: default
             </ul>
         </div>
     </div>
+</div>

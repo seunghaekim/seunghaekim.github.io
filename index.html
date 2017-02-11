@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div id="fullpage">
+<div class="container-fluid">
     {% for post in site.posts %}
-        <div class="section">{{ post }}</div>
+        {{ post }}
     {% endfor %}
 </div>

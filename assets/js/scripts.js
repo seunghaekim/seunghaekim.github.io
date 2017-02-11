@@ -1,5 +1,7 @@
+
+
 $(document).ready(function() {
-    $('#fullpage').fullpage({
-        navigation: true
+    $('.gallery').slick({
+        infinite: true
     });
 });
