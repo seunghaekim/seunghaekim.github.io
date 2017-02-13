@@ -16,4 +16,15 @@ tools:
     - Ai CS6
     - Adobe Au CS6
 external: https://vimeo.com/68992646
+features:
+    - noisegarden_vid_0.gif
+    - noisegarden_vid_1.gif
+    - noisegarden_vid_2.gif
+    - noisegarden_vid_3.gif
+    - noisegarden_vid_4.gif
+    - noisegarden_vid_5.gif
+    - noisegarden_vid_6.gif
+    - noisegarden_vid_7.gif
+    - noisegarden_vid_8.gif
+    - noisegarden_vid_9.gif
 ---

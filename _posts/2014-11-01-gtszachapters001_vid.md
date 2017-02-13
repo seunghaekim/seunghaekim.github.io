@@ -18,4 +18,13 @@ tools:
     - Adobe Au CS6
 layout: post
 external: https://vimeo.com/111107307
+features:
+    - gtszachapters001_0.gif
+    - gtszachapters001_1.gif
+    - gtszachapters001_2.gif
+    - gtszachapters001_4.gif
+    - gtszachapters001_5.gif
+    - gtszachapters001_6.gif
+    - gtszachapters001_8.gif
+    - gtszachapters001_9.gif
 ---

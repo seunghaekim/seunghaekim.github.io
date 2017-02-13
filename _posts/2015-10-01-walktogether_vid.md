@@ -17,5 +17,16 @@ color: color
 # binding: saddle-stitching
 tools: ["Adobe Pr CS6", "Adobe Ae CS6", "Adobe Ps CS6", "Ai CS6"]
 layout: post
-external: https://www.youtube.com/watch?v=B8sdEizB9Kw
+# external: https://www.youtube.com/watch?v=B8sdEizB9Kw
+features:
+    - walk together with friends_0.gif
+    - walk together with friends_1.gif
+    - walk together with friends_2.gif
+    - walk together with friends_3.gif
+    - walk together with friends_4.gif
+    - walk together with friends_5.gif
+    - walk together with friends_6.gif
+    - walk together with friends_7.gif
+    - walk together with friends_8.gif
+    - walk together with friends_9.gif
 ---
