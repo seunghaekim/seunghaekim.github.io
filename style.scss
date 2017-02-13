@@ -18,18 +18,16 @@ body {
     font-size: 100%;
 }
 
-.container-fluid.post {
-    height: 100vh;
-    overflow:hidden;
+.metadata {
+    // display: none;
 }
 
-.work-portfolio {
-    height: 60%;
+#side_menu {
+    position:fixed;
+    z-index: 999999;
 }
 
-.work-portfolio img {
-    height: 500px;
-}
-
+.grid-item { width: 300px; }
+.grid-item img { width: 95%; }
 @import "highlights";
 @import "svg-icons";

@@ -1,103 +1,88 @@
 ---
 layout: default
 ---
-
 <div class="container-fluid post">
-
     <!-- 포트폴리오 본문 -->
-    <div class="work-portfolio row">
+
+    <div class="metadata col-md-2 col-lg-2">
+        <li class="pagetitle"><h1>{{ page.title }}</h1></li>
+        {% if page.categories %}
+        <li><span class="--upcase --strong">{{ page.categories | join: ", " | capitalize }}</span></li>
+    </div>
+
+    <div id="{{ page.title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="work-portfolio col-md-10 col-lg-10">
+
+
         <!-- 비메오 링크일 경우 -->
-        {% if page.external contains "vimeo" %}
-          {% assign vimeolink = page.external | split:"/" %}
-          <iframe src="{{ vimeolink[0] }}//player.{{ vimeolink[1] }}{{ vimeolink[2] }}/video/{{ vimeolink[3] }}?byline=0&title=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        {% endif %}
+        <!-- {% if page.external contains "vimeo" %}
+        {% assign vimeolink = page.external | split:"/" %}
+        <iframe src="{{ vimeolink[0] }}//player.{{ vimeolink[1] }}{{ vimeolink[2] }}/video/{{ vimeolink[3] }}?byline=0&title=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% endif %} -->
 
         <!-- 유투브 링크일 경우 -->
-        {% if page.external contains "youtube" %}
+        <!-- {% if page.external contains "youtube" %}
             {% assign youtubeLink = page.external | split:"=" %}
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{ youtubeLink[1] }}" frameborder="0" allowfullscreen></iframe>
-        {% endif %}
+        {% endif %} -->
 
+        <div class="grid gallery">
         {% if page.features %}
-        <div class="gallery">
             {% for item in page.features %}
-                <div class="artwork">
-                    <img src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ item }}" />
-                </div>
+            <div class="grid-item">
+                <img alt="{{ item }}" src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/thumbs/{{ item }}" data-image="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ item }}"/>
+            </div>
             {% endfor %}
-        </div>
         {% endif %}
+        </div>
+        <script type="text/javascript">
+            var masonry_initialize = '#{{ page.title | downcase | replace: ' ', '-' | replace: '.', ''}}>.grid';
+
+            $(masonry_initialize).masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 200
+            });
+        </script>
     </div>
 
     <!-- 추가 정보 -->
-    <div class="work-information row">
-        <!-- 작업물 제목 -->
-        <div class="work-title col-md-6">
-            <h1>{{ page.title }}</h1>
-        </div>
-
-        <!-- 작업물 메타데이터 -->
-        <div class="work-metadata col-md-3">
-            <ul>
-                {% if page.categories %}
-                  <li><span class="--upcase --strong">{{ page.categories | join: ", " | capitalize }}</span></li>
-                {% endif %}
-
-                {% if page.roll %}
-                  <li><span class="--upcase --strong">ROLL: </span>{{ page.roll | join: ", " | capitalize }}</li>
-                {% endif %}
-
-                {% if page.date %}
-                  <li><span class="--upcase --strong">DATE: </span>{{ page.date | date: "%B, %Y" }}</li>
-                {% endif %}
-
-                {% if page.client %}
-                  <li><span class="--upcase --strong">CLIENT: </span>{{ page.client | join: ", " | capitalize }}</li>
-                {% endif %}
-
-                {% if page.co-work %}
-                  <li><span class="--upcase --strong">co-work: </span>{{ page.co-work | join: ", " | capitalize }}</li>
-                {% endif %}
-            </ul>
-        </div>
-
-        <div class="work-material col-md-3">
-            <ul>
-                {% if page.size %}
-                <li><span class="--upcase --strong">size:</span>
-                    {{ page.size  | join: ", " | capitalize }}
-                    {% if page.amount %}, {{ page.amount }} pages {% endif %}
-                </li>
-                {% endif %}
-
-                {% if page.duration %}
-                <li><span class="--upcase --strong">duration:</span> {{ page.duration  | join: ", " | capitalize }}</li>
-                {% endif %}
-
-                {% if page.frame-rate %}
-                <li><span class="--upcase --strong">Frame rate:</span> {{ page.frame-rate  | join: ", " | capitalize }}</li>
-                {% endif %}
-
-                {% if page.color %}
-                <li><span class="--upcase --strong">color:</span> {{ page.color | join: ", " }}</li>
-                {% endif %}
-
-                {% if page.binding %}
-                <li><span class="--upcase --strong">binding:</span> {{ page.binding }}</li>
-                {% endif %}
-
-                {% if page.tools %}
-                <li><span class="--upcase --strong">tools:</span> {{ page.tools | join: ", " | capitalize }}</li>
-                {% endif %}
-            </ul>
-        </div>
-
-        <div class="work-external --col-spanX1 --halfmargin">
-            <ul>
-                {% if page.external %}
-                <li><span class="--upcase --strong">external links: </span><a href="{{ page.external }}">{{ page.external }}</a></li>
-                {% endif %}
-            </ul>
-        </div>
-    </div>
 </div>
+        <!-- <ul class="col-md-6">
+
+            {% endif %}
+            {% if page.roll %}
+            <li><span class="--upcase --strong">ROLL: </span>{{ page.roll | join: ", " | capitalize }}</li>
+            {% endif %}
+            {% if page.date %}
+            <li><span class="--upcase --strong">DATE: </span>{{ page.date | date: "%B, %Y" }}</li>
+            {% endif %}
+            {% if page.client %}
+            <li><span class="--upcase --strong">CLIENT: </span>{{ page.client | join: ", " | capitalize }}</li>
+            {% endif %}
+            {% if page.co-work %}
+            <li><span class="--upcase --strong">co-work: </span>{{ page.co-work | join: ", " | capitalize }}</li>
+            {% endif %}
+            {% if page.size %}
+            <li><span class="--upcase --strong">size:</span>
+                {{ page.size  | join: ", " | capitalize }}
+                {% if page.amount %}, {{ page.amount }} pages {% endif %}
+            </li>
+            {% endif %}
+            {% if page.duration %}
+            <li><span class="--upcase --strong">duration:</span> {{ page.duration  | join: ", " | capitalize }}</li>
+            {% endif %}
+            {% if page.frame-rate %}
+            <li><span class="--upcase --strong">Frame rate:</span> {{ page.frame-rate  | join: ", " | capitalize }}</li>
+            {% endif %}
+            {% if page.color %}
+            <li><span class="--upcase --strong">color:</span> {{ page.color | join: ", " }}</li>
+            {% endif %}
+            {% if page.binding %}
+            <li><span class="--upcase --strong">binding:</span> {{ page.binding }}</li>
+            {% endif %}
+            {% if page.tools %}
+            <li><span class="--upcase --strong">tools:</span> {{ page.tools | join: ", " | capitalize }}</li>
+            {% endif %}
+            {% if page.external %}
+            <li><span class="--upcase --strong">external links: </span><a href="{{ page.external }}">{{ page.external }}</a></li>
+            {% endif %}
+        </ul> -->
