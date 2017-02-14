@@ -8,54 +8,86 @@ layout: default
         <li class="pagetitle"><h1>{{ page.title }}</h1></li>
 
         {% if page.categories %}
-        <li><span class="--upcase --strong">{{ page.categories | join: ", " | capitalize }}</span></li>
+        <li class="categories">
+            <span class="desc">{{ page.categories | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.roll %}
-        <li><span class="--upcase --strong">ROLL: </span>{{ page.roll | join: ", " | capitalize }}</li>
+        <li class="roll">
+            <span class="label">roll</span> <span class="desc">{{ page.roll | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.date %}
-        <li><span class="--upcase --strong">DATE: </span>{{ page.date | date: "%B, %Y" }}</li>
+        <li class="date">
+            <span class="label">date</span>
+            <span class="desc">{{ page.date | date: "%B, %Y" }}</span>
+        </li>
         {% endif %}
 
         {% if page.client %}
-        <li><span class="--upcase --strong">CLIENT: </span>{{ page.client | join: ", " | capitalize }}</li>
+        <li class="client">
+            <span class="label">client</span>
+            <span class="desc">{{ page.client | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.co-work %}
-        <li><span class="--upcase --strong">co-work: </span>{{ page.co-work | join: ", " | capitalize }}</li>
+        <li class="co-work">
+            <span class="label">co-work</span>
+            <span class="desc">{{ page.co-work | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.size %}
-        <li><span class="--upcase --strong">size:</span>
-            {{ page.size  | join: ", " | capitalize }}
-            {% if page.amount %}, {{ page.amount }} pages {% endif %}
+        <li class="size">
+            <span class="label">size</span>
+            <span class="desc"> <span class="material-size">{{ page.size  | join: ", " }} </span>
+            {% if page.amount %} <span class="pageamount">{{ page.amount }}</span> {% endif %}</span>
         </li>
         {% endif %}
 
         {% if page.duration %}
-        <li><span class="--upcase --strong">duration:</span> {{ page.duration  | join: ", " | capitalize }}</li>
+        <li class="duration">
+            <span class="label">duration</span>
+            <span class="desc">{{ page.duration  | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.frame-rate %}
-        <li><span class="--upcase --strong">Frame rate:</span> {{ page.frame-rate  | join: ", " | capitalize }}</li>
+        <li class="frame-rate">
+            <span class="frame-rate">frame rate</span>
+            <span class="desc">{{ page.frame-rate | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.color %}
-        <li><span class="--upcase --strong">color:</span> {{ page.color | join: ", " }}</li>
+        <li class="color">
+            <span class="label">color</span>
+            <span class="desc">{{ page.color | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.binding %}
-        <li><span class="--upcase --strong">binding:</span> {{ page.binding }}</li>
+        <li class="binding">
+            <span class="label">binding</span>
+            <span class="desc">{{ page.binding }}</span>
+        </li>
         {% endif %}
 
         {% if page.tools %}
-        <li><span class="--upcase --strong">tools:</span> {{ page.tools | join: ", " | capitalize }}</li>
+        <li class="tools">
+            <span class="label">tools</span>
+            <span class="desc">{{ page.tools | join: ", " }}</span>
+        </li>
         {% endif %}
 
         {% if page.external %}
-        <li><span class="--upcase --strong">external links: </span><a href="{{ page.external }}">{{ page.external }}</a></li>
+        <li>
+            <span class="label">external links</span>
+            <span class="desc"><a href="{{ page.external }}">{{ page.external }}</a></span>
+        </li>
         {% endif %}
     </div>
 
@@ -88,10 +120,7 @@ layout: default
         <script type="text/javascript">
             var masonry_initialize = '#{{ postid }}>.grid';
 
-            $(masonry_initialize).masonry({
-                itemSelector: '.grid-item',
-                columnWidth: masonry_column_width
-            });
+            $(masonry_initialize).masonry(masonry_option);
         </script>
     </div>
 

@@ -2,7 +2,7 @@
 title: 2015 walk together campaign, walk together with friends
 categories: [Video]
 roll: Video Edit, BGM Remix
-client: "gtsz.rcp"
+client: socksappeal
 # co-work: "대전 문화협동조합"
 # publisher: "대전 문화협동조합"
 size:

@@ -37,6 +37,38 @@ section {
 }
 
 .grid-item { width: 300px; }
-.grid-item img { width: 95%; }
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.metadata li {
+    display: inline;
+
+    &:after {
+        content: "/";
+        font-weight: boler;
+        color: red;
+    }
+
+    &:last-child:after {
+        content: inherit;
+    }
+
+    .label {
+        font-weight:bolder;
+        text-transform: uppercase;
+        &:after {
+            content: ": ";
+        }
+    }
+    .desc {
+        .material-size {
+            &:after {
+                content: ": ";
+            }
+        }
+    }
+}
 @import "highlights";
 @import "svg-icons";
