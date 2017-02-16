@@ -1,6 +1,7 @@
 ---
 title: 2014 Daejeon International Art Freemarket Festa
-categories: [poster design]
+categories:
+    - poster design
 co-work: "대전 문화협동조합"
 size: A2
 color: CMYK

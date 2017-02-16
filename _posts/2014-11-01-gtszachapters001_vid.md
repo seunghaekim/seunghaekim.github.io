@@ -1,6 +1,7 @@
 ---
 title: 『소년과 아이와 바다와 그 밖에 모든 호의에 관한 이야기들』 Teaser Video
-categories: Video
+categories:
+    - Video
 roll:
     - Video Footage Edit
     - Graphic Element Design

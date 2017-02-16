@@ -6,69 +6,74 @@
 //
 
 @import "reset";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+.font-big {
+    font-size: 1.5em
+};
 
 /*basic elements*/
-@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
-
 body {
-    margin: 0em;
-    font-family: 'Noto Sans Korean', sans-serif;
-    font-weight: 300;
-    line-height: 120%;
-    font-size: 100%;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+
+    a {
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+        text-decoration-style: dashed;
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+}
+
+.toHidden {
+    visibility: hidden;
+    display: none;
+}
+
+#post-list {
+    margin-top: 2em;
 }
 
 #contents {
-    max-width: 1200px;
-}
+    #post-list {
 
-section {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
+        .metadata {
+            margin-bottom: 1em;
 
-.metadata {
-    // display: none;
-}
+            li {
+                display:inline-block;
+                background-color: white;
 
-#side_menu {
-    position:fixed;
-    z-index: 999999;
-}
+            }
 
-.grid-item { width: 300px; }
-.grid-item img {
-    width: 100%;
-    height: auto;
-}
-
-.metadata li {
-    display: inline;
-
-    &:after {
-        content: "/";
-        font-weight: boler;
-        color: red;
-    }
-
-    &:last-child:after {
-        content: inherit;
-    }
-
-    .label {
-        font-weight:bolder;
-        text-transform: uppercase;
-        &:after {
-            content: ": ";
-        }
-    }
-    .desc {
-        .material-size {
-            &:after {
-                content: ": ";
+            .categories {
+                text-transform: capitalize;
+                font-weight: 600;
+                font-style: italic;
             }
         }
+
+    }
+
+    .gallery {
+        img {
+            width: 100%;
+        }
+
+        .gallery-item {
+        }
     }
 }
+
 @import "highlights";
 @import "svg-icons";

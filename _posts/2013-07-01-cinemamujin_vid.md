@@ -1,6 +1,7 @@
 ---
 title: cinema mujin teaser video
-categories: Live Video
+categories:
+    - Live Video
 roll:
   - Video Footage Edit
   - Graphic Element Design

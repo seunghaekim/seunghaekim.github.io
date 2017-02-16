@@ -1,6 +1,7 @@
 ---
 title: hand-out logotype
-categories: logo design
+categories:
+    - logo design
 client: hand-out
 color: Black and White
 tools: Ai CS6

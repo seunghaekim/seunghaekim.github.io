@@ -1,6 +1,7 @@
 ---
 title: DAFLOG VOL.0
-categories: book design
+categories:
+    - book design
 roll:
     - Photography
     - Retouching

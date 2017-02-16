@@ -1,6 +1,7 @@
 ---
 title: gtsz.rcp logotype
-categories: [logo design]
+categories:
+    - logo design
 client: "gtsz.rcp"
 color: Black and White
 tools: ["Ai CS6"]

@@ -1,6 +1,7 @@
 ---
 title: 2015 walk together campaign, walk together with friends
-categories: [Video]
+categories:
+    - Video
 roll: Video Edit, BGM Remix
 client: socksappeal
 # co-work: "대전 문화협동조합"

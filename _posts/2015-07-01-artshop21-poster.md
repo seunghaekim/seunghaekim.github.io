@@ -1,6 +1,7 @@
 ---
 title: Artshop 21 Promotion Poster
-categories: poster design
+categories:
+    - poster design
 client: "아트샵 이십일"
 size:
     - A2

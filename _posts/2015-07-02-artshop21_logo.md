@@ -1,6 +1,7 @@
 ---
 title: Artshop 21 Logotype
-categories: logo design
+categories:
+    - logo design
 client: "아트샵 이십일"
 color: Black and White
 tools:

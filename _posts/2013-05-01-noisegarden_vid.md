@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "NOise garden, Choi Joonyong, Hong Chulki LIVE VIDEO"
-categories: Live Video
+categories:
+    - Live Video
 roll:
     - 2 Camera Operating
     - Video Edit

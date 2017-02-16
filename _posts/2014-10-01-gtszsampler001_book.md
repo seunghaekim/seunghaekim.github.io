@@ -1,6 +1,7 @@
 ---
 title: 벽장 속의 드래곤
-categories: "book design"
+categories:
+    - book design
 roll:
     - write
     - edit
