@@ -8,14 +8,23 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
 @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+.container-fluid {
+
+}
 
 .font-big {
     font-size: 1.5em
-};
+}
+
+.--trim-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
 /*basic elements*/
 body {
     font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    line-height: 170%;
 }
 
 h1 {
@@ -40,32 +49,54 @@ h1 {
     display: none;
 }
 
+.categories {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.label {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
 #post-list {
-    margin-top: 2em;
+    // margin-top: 2em;
+}
+
+.site-information {
+    margin-bottom: 1em;
 }
 
 #contents {
     #post-list {
 
+        span, h1 {
+            background-color: white;
+        }
+
         .metadata {
             margin-bottom: 1em;
 
             li {
-                display:inline-block;
-                background-color: white;
-
-            }
-
-            .categories {
-                text-transform: capitalize;
-                font-weight: 600;
-                font-style: italic;
+                display:inline-flex;;
             }
         }
 
     }
 
     .gallery {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+        .caption {
+            text-align: right;
+            position: relative;
+            top: -10px;
+        }
+
         img {
             width: 100%;
         }
@@ -74,6 +105,41 @@ h1 {
         }
     }
 }
+
+#post-content {
+
+    .metadata {
+        ul {
+            padding-bottom: 1em;
+        }
+    }
+
+
+    span.pagetitle::after {
+        content: " / ";
+        color: red;
+    }
+}
+
+.masonry {
+    .video-wrapper {
+        background-color: white;
+    }
+
+    .grid-item {
+        padding: 5px;
+        overflow-y: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
+// xs
+@media (max-width: 768px) {
+
+}
+
+
 
 @import "highlights";
 @import "svg-icons";

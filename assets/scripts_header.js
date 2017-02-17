@@ -7,27 +7,47 @@ function randomRange(n1, n2) {
 function tangoMetre(tango, direction) {
     var result = $(tango).css(direction);
     result = result.split("px");
+
     return Number(result[0]);
 };
 
 function windowCentre(tango) {
-    var winWidth = $(window).width(),
-        winHeight = $(window).height(),
-        tangoWidth = tangoMetre(vh_center, "width"),
-        tangoHeight = tangoMetre(vh_center, "height"),
-        position = {
-            "top": function() {
-                this.top = winHeight/2-tangoHeight/2;
-                return Math.round(this.top);
-            },
-            "left": function() {
-                this.left = winWidth/2-tangoWidth/2;
-                return Math.round(this.left);
-            },
-            "z-index": -10,
-            "position": "absolute"
-        };
-    console.log("position", position.top(), position.left());
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    var tangoWidth = tangoMetre(vh_center, "width");
+    var tangoHeight = tangoMetre(vh_center, "height")
+    var position = {
+        "top": function() {
+            this.top = winHeight/2-tangoHeight/2;
+
+            return Math.round(this.top);
+        },
+        "left": function() {
+            this.left = winWidth/2-tangoWidth/2;
+
+            return Math.round(this.left);
+        },
+        "z-index": -10,
+        "position": "fixed"
+    };
+
+    // console.log(
+    //     "window\t",
+    //     "w:", winWidth, winWidth/2,
+    //     "h:", winHeight, winHeight/2
+    // );
+    // console.log(
+    //     "target\t",
+    //     "w:", tangoWidth,
+    //     "h:", tangoHeight
+    // );
+    // console.log(
+    //     "pos\t",
+    //     "w:", position.top(),
+    //     "h:", position.left()
+    // );
+    // console.log("---");
+
     $(tango).css(position);
     // console.log("pos", position);
 };

@@ -4,6 +4,9 @@
 
     <body>
         <div id="contents" class="container-fluid">
+            <ul class="site-information">
+                <li class="site_title"><a href="{{ site.url }}"><h1>{{ site.name }}</a></h1></li>
+            </ul>
             {{ content }}
         </div>
         {% include analytics.html %}

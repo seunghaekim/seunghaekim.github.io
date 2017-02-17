@@ -2,7 +2,7 @@
 layout: default
 ---
 
-    <div id="post-list" class="container-fluid post col-md-6 col-sm-12">
+    <div id="post-list">
         <script type="text/javascript">
         var gallery_item_array = new Object(),
             site_base_url = "{{ site.baseurl }}";
@@ -19,19 +19,24 @@ layout: default
             };
         </script>
 
+
         <ul class="metadata meta-item">
-            <li class="pagetitle"><h1><a class="{{ postid }}">{{ post.title }}</a></h1></li>
+            <li class="pagetitle"><h1><a class="{{ postid }}" href="{{ post.url }}">{{ post.title }}</a></h1></li>
             <li class="categories">
                 <span class="desc font-big">{{ post.categories | join: ", " }}</span>
             </li>
         </ul>
         {% endfor %}
     </div>
-    <div class="gallery --vh-center col-md-6">
+
+    <div class="gallery --vh-center col-lg-8 col-md-8 col-sm-8 hidden-xs">
+        <div class="caption">
+            <!-- <p>asldkjvzxcjosdfk</p> -->
+        </div>
         <script type="text/javascript">
             build_gallery(gallery_item_array, '.gallery');
         </script>
-    </div>
+    <!-- </div> -->
 
             <!-- {% if post.categories %}
             {% endif %}
