@@ -23,98 +23,17 @@ layout: default
         <ul class="metadata meta-item">
             <li class="pagetitle"><h1><a class="{{ postid }}" href="{{ post.url }}">{{ post.title }}</a></h1></li>
             <li class="categories">
-                <span class="desc font-big">{{ post.categories | join: ", " }}</span>
+                {{ post.categories | join: ", " }}
             </li>
+            <li>{{ post.date | date_to_string }}</li>
         </ul>
         {% endfor %}
     </div>
 
-    <div class="gallery --vh-center col-lg-8 col-md-8 col-sm-8 hidden-xs">
+    <div class="gallery col-lg-8 col-md-8 col-sm-8 hidden-xs --trim-padding">
         <div class="caption">
-            <!-- <p>asldkjvzxcjosdfk</p> -->
         </div>
         <script type="text/javascript">
             build_gallery(gallery_item_array, '.gallery');
         </script>
-    <!-- </div> -->
-
-            <!-- {% if post.categories %}
-            {% endif %}
-
-            {% if post.roll %}
-            <li class="roll">
-                <span class="label">roll</span> <span class="desc">{{ post.roll | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.date %}
-            <li class="date">
-                <span class="label">date</span>
-                <span class="desc">{{ post.date | date: "%B, %Y" }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.client %}
-            <li class="client">
-                <span class="label">client</span>
-                <span class="desc">{{ post.client | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.co-work %}
-            <li class="co-work">
-                <span class="label">co-work</span>
-                <span class="desc">{{ post.co-work | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.size %}
-            <li class="size">
-                <span class="label">size</span>
-                <span class="desc"> <span class="material-size">{{ post.size  | join: ", " }} </span>
-                {% if post.amount %} <span class="pageamount">{{ post.amount }}</span> {% endif %}</span>
-            </li>
-            {% endif %}
-
-            {% if post.duration %}
-            <li class="duration">
-                <span class="label">duration</span>
-                <span class="desc">{{ post.duration  | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.frame-rate %}
-            <li class="frame-rate">
-                <span class="frame-rate">frame rate</span>
-                <span class="desc">{{ post.frame-rate | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.color %}
-            <li class="color">
-                <span class="label">color</span>
-                <span class="desc">{{ post.color | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.binding %}
-            <li class="binding">
-                <span class="label">binding</span>
-                <span class="desc">{{ post.binding }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.tools %}
-            <li class="tools">
-                <span class="label">tools</span>
-                <span class="desc">{{ post.tools | join: ", " }}</span>
-            </li>
-            {% endif %}
-
-            {% if post.external %}
-            <li>
-                <span class="label">external links</span>
-                <span class="desc"><a href="{{ post.external }}">{{ post.external }}</a></span>
-            </li>
-            {% endif %}
-        </div> -->
+    </div>

@@ -1,6 +1,5 @@
 ---
 ---
-
 //
 // IMPORTS
 //
@@ -8,8 +7,17 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
 @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
 .container-fluid {
 
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: 900;
+    color: black;
+    padding: 0px;
 }
 
 .font-big {
@@ -25,22 +33,31 @@
 body {
     font-family: 'Roboto', 'Noto Sans KR', sans-serif;
     line-height: 170%;
+    font-size: calc(0.6vmax + 10px);
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 150%;
     font-weight: 700;
+}
 
-    a {
-        color: black;
-        text-decoration: underline;
-        text-decoration-color: black;
-        text-decoration-style: dashed;
+h2 {
+    font-size: 120%;
+    font-weight: 600;
+}
 
-        &:hover {
-            color: white;
-            background-color: black;
-        }
+h3 {
+    font-size: 110%;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+a {
+    color: black;
+
+    &:hover {
+        color: white;
+        background-color: black;
     }
 }
 
@@ -55,10 +72,22 @@ h1 {
     font-style: italic;
 }
 
-.label {
-    text-transform: uppercase;
-    font-weight: 900;
+#resumeTitle {
+    margin-top: 5em;
 }
+.resume {
+    h2 {
+        margin-bottom: 0.5em;
+        margin-top: 1.5em;
+    }
+
+    h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+
+
 
 #post-list {
     // margin-top: 2em;
@@ -66,6 +95,14 @@ h1 {
 
 .site-information {
     margin-bottom: 1em;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.site-nav li {
+    vertical-align: text-top;
 }
 
 #contents {
@@ -122,24 +159,24 @@ h1 {
 }
 
 .masonry {
-    .video-wrapper {
-        background-color: white;
-    }
-
     .grid-item {
         padding: 5px;
         overflow-y: hidden;
         img {
             width: 100%;
+            box-shadow: 2px 3px 2px -3px red;
+
+            &:hover {
+                box-shadow: 3px 4px 5px -6px red;
+            }
         }
     }
 }
+
 // xs
 @media (max-width: 768px) {
 
 }
-
-
 
 @import "highlights";
 @import "svg-icons";

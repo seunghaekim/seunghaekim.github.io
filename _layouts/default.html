@@ -4,9 +4,17 @@
 
     <body>
         <div id="contents" class="container-fluid">
-            <ul class="site-information">
-                <li class="site_title"><a href="{{ site.url }}"><h1>{{ site.name }}</a></h1></li>
-            </ul>
+            <div class="nav-bar site-information col-md-12 col-sm-12 --trim-padding">
+                <ul class="--trim-padding col-md-6">
+                    <li class="site_title"><h1><a href="{{ site.url }}">{{ site.name }}</a></h1></li>
+                    <li class="site_information">
+                        {{ site.description }}
+                    </li>
+                </ul>
+                <ul class="site-nav col-md-6 --trim-padding">
+                    <li class="site_information"><a href="{{ site.url }}/about/">About</a></li>
+                </ul>
+            </div>
             {{ content }}
         </div>
         {% include analytics.html %}

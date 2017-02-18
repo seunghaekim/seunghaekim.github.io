@@ -31,25 +31,7 @@ function windowCentre(tango) {
         "position": "fixed"
     };
 
-    // console.log(
-    //     "window\t",
-    //     "w:", winWidth, winWidth/2,
-    //     "h:", winHeight, winHeight/2
-    // );
-    // console.log(
-    //     "target\t",
-    //     "w:", tangoWidth,
-    //     "h:", tangoHeight
-    // );
-    // console.log(
-    //     "pos\t",
-    //     "w:", position.top(),
-    //     "h:", position.left()
-    // );
-    // console.log("---");
-
     $(tango).css(position);
-    // console.log("pos", position);
 };
 
 function build_gallery(ar, tango) {

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<article class="container resume">
+
+  <h1 id="resumeTitle">{{ site.name_ko }}, {{ site.name }}</h1>
+
+  <div class="entry">
+    <!-- {{ content }} -->
+    {% assign reverse_resume = site.resume | reverse %}
+
+    <h2 class="biography"></h2>
+    {% for resume in reverse_resume %}
+    {% if resume.categories contains "biography" %}
+        {{ resume.content }}
+    {% endif %}
+    {% endfor %}
+
+    <h2 class="summary"></h2>
+    {% for resume in reverse_resume %}
+    {% if resume.categories contains "summary" %}
+        {{ resume.content }}
+    {% endif %}
+    {% endfor %}
+
+    <h2 class="workhistory">Work History</h2>
+
+    {% for resume in reverse_resume %}
+        {% if resume.categories contains "workhistory" %}
+
+        <h3 class="workhistory">{{ resume.title }}, {{ resume.roll }}, {{ resume.start | date: "%Y" }} ― {% if resume.end %}{{ resume.end | date: "%Y" }}{% endif %}</h3>
+
+        <ul>
+            <li class="roll"></li>
+        </ul>
+
+        {{ resume.content }}
+
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="awards">Awards</h2>
+    {% for resume in reverse_resume %}
+        {% if resume.categories contains "awards" %}
+
+        <h3 class="awards">"{{ resume.title }}", {{ resume.award-categories}}, {{ resume.host }}, {{ resume.date | date: "%Y" }}</h3>
+
+        {% if resume.description %}
+        <p class="description">{{ resume.description }}</p>
+        {% endif %}
+
+        {% endif %}
+    {% endfor %}
+  </div>
+</article>

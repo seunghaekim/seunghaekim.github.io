@@ -104,16 +104,37 @@ layout: default
     </div>
 
     <div class="masonry grid col-lg-9 col-md-9 --trim-padding">
-        {% if page.external contains "vimeo" %}
-        <div class="grid-item video col-lg-8 col-md-3 col-sm-12 --trim-padding">
+    {% if page.external contains "vimeo" or page.external contains "youtube" %}
+        <div class="grid-item video col-lg-8 col-md-12 col-sm-12 --trim-padding">
 
-            {% assign vimeolink = page.external | split:"/" %}
-            <iframe src="{{ vimeolink[0] }}//player.{{ vimeolink[1] }}{{ vimeolink[2] }}/video/{{ vimeolink[3] }}?byline=0&title=0&portrait=0" width="100%" height="478" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% if page.external contains "vimeo" %}
+            {% assign vimeoid = page.external | split:"/" %}
+            <iframe src="{{ vimeoid[0] }}//player.{{ vimeoid[1] }}{{ vimeoid[2] }}/video/{{ vimeoid[3] }}?byline=0&title=0&portrait=0" width="100%" height="478" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+
+            {% if page.external contains "youtube" %}
+            {% assign youtubeid = page.external | split:"=" %}
+            <iframe width="100%" height="478" src="https://www.youtube.com/embed/{{ youtubeid[1] }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
         </div>
-        {% endif %}
+    {% endif %}
+
     {% if page.features %}
+
+        {% if page.features.size > 5 %}
+            {% assign col_size = "col-lg-4 col-md-3 col-sm-6" %}
+        {% endif %}
+
+        {% if page.features.size > 3 and page.features.size < 6 %}
+            {% assign col_size = "col-lg-6 col-md-6 col-sm-6" %}
+        {% endif %}
+
+        {% if page.features.size > 0 and page.features.size < 4 %}
+            {% assign col_size = "col-lg-12 col-md-12 col-sm-12" %}
+        {% endif %}
+
         {% for item in page.features %}
-        <div class="grid-item image col-lg-4 col-md-3 col-sm-6 --trim-padding">
+        <div class="grid-item image --trim-padding {{ col_size }}">
             <img alt="{{ item }}" src="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ item }}" data-image="{{ site.baseurl }}/features/{{ page.date | date: "%Y-%m-%d" }}/{{ item }}"/>
         </div>
         {% endfor %}
@@ -131,6 +152,18 @@ layout: default
         $grid.imagesLoaded().progress( function(){
             $grid.masonry('layout');
         });
+
+        $grid.on("click", ".grid-item", function() {
+            $(this).toggleClass('col-lg-4');
+            $(this).toggleClass('col-lg-12');
+
+            $(this).toggleClass('col-md-3');
+            $(this).toggleClass('col-md-12');
+
+            $(this).toggleClass('col-sm-6');
+            $(this).toggleClass('col-sm-12');
+            $grid.masonry('layout');
+        })
 
     </script>
     </div>
