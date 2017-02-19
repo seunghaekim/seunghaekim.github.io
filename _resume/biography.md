@@ -1,8 +1,9 @@
 ---
     title: biography
     categories: biography
+    layout: resume
+    collections: resume
 ---
-
 - 서울시 강서구
-- {{ site.footer-links.email }}
+- aka.seunghaekim@gmail.com
 - 010-9001-1579
