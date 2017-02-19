@@ -2,7 +2,7 @@
     start: 2014-02-01
     end: 2015-02-01
     title: 스타일카텐
-    roll: 디자이너, 생산 관리
+    roll: Designer, Factory Manager
     categories: workhistory
     resume: workhistory
 ---
