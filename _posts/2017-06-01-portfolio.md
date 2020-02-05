@@ -1,15 +1,15 @@
 ---
 layout: post
 title: kyurijeon.com
-date_done: 2018-05-01
+date_done: 2017-07-01
 categories:
   - Web Developement
 description:
-  - Artist portfolio website
+  - 예술가 포트폴리오 웹사이트
 type:
   - personal
-roll:
-  - Back-end, Front-end
+role:
+  - Back-end, Front-end, Design
 stacks:
   - php
   - wordpress
@@ -17,6 +17,5 @@ stacks:
   - mysql
 external: http://www.kyurijeon.com/
 ---
-- Design and building a portfolio and a system that managing artworks and resume for a visual artist.
-- backends for wordpress/php
-- currently service on AWS lightsail with docker containers (2019)
+- 작품과 전시 소식을 관리할 수 있는 예술가 포트폴리오 웹사이트.
+- 현재 도커 컨테이너와 AWS Lightsail을 통해 호스팅되고 있음. (2019)

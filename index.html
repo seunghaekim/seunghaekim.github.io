@@ -5,14 +5,34 @@ layout: default
     {% assign types = "personal, job, " | split: ", " %}
     {% for type in types %}
     <div class="works">
-        <h2>{{ type }} projects</h2>
+        <h2 class="works-type">{{ type }} projects</h2>
         <ul class="works-list">
             {% assign posts = site.posts | where:"type", type %}
             {% for post in posts %}
             <li class="works-item">
                 <div class="item-header">
-                    <h3>{{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}</h3>
-                    <p class="stacks">{{ post.stacks | join: ", "}}</p>
+                    <h3>
+                        {% if post.external %}
+                        <a href="{{ post.external }}">{{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}</a>
+                        {% else %}
+                        {{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}
+                        {% endif %}
+                    </h3>
+                    {% if post.description %}
+                    <p class="description">
+                        <span class="label">desc.</span> {{ post.description }}
+                    </p>
+                    {% endif %}
+                    {% if post.role %}
+                    <p class="role">
+                        <span class="label">role.</span> {{ post.role | join: ", "}}
+                    </p>
+                    {% endif %}
+                    {% if post.stacks %}
+                    <p class="stacks">
+                        <span class="label">stacks.</span> {{ post.stacks | join: ", "}}
+                    </p>
+                    {% endif %}
                 </div>
                 <div class="item-body">
                     {{ post.content }}

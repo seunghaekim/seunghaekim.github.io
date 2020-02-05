@@ -4,9 +4,16 @@
 // IMPORTS
 //
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
-@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+}
+
+ul, ol, menu {
+  padding-left: 1em;
+}
 
 .nav-bar {
   margin: 2em -0.5em;
@@ -17,7 +24,28 @@
 }
 
 #post-list {
+
+  .item-header p {
+    margin: 0.1em 0;
+  }
+
+  .label {
+    font-weight: bolder;
+  }
+
+  .works-item {
+    margin: 2em 0;
+  }
+
+  .works {
+    margin: 3em 0;
+  }
+
   .item-body {
     margin-left: 1em;
+  }
+
+  .works-type {
+    text-transform: capitalize;
   }
 }
