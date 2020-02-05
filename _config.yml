@@ -3,12 +3,12 @@ name: Seung-hae KIM
 name_ko: 김승해
 
 # Short bio or description (displayed in the header)
-description: Graphic Designer, Printed Matters, Web Design
+description: web developer
 
 # Includes an icon in the footer for each username you enter
 footer-links:
   email: aka.seunghaekim@gmail.com
-  github: seunghaekim
+  github: https://github.com/seunghaekim
   rss: seunghaekim.github.io
 
 classifications:
