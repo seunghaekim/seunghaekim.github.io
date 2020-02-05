@@ -4,179 +4,20 @@
 // IMPORTS
 //
 
-@import "reset";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
 @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
 
-.container-fluid {
 
+.nav-bar {
+  margin: 2em -0.5em;
+  .item {
+    display: inline-block;
+    margin: 0 0.5em;
+  }
 }
-
-.label {
-    text-transform: uppercase;
-    font-size: 100%;
-    font-weight: 900;
-    color: black;
-    padding: 0px;
-}
-
-.font-big {
-    font-size: 1.5em
-}
-
-.--trim-padding {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-/*basic elements*/
-body {
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
-    line-height: 170%;
-    font-size: calc(0.6vmax + 10px);
-}
-
-h1 {
-    font-size: 150%;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 120%;
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 110%;
-    font-weight: 500;
-    text-decoration-line: underline;
-}
-
-a {
-    color: black;
-
-    &:hover {
-        color: white;
-        background-color: black;
-    }
-}
-
-.toHidden {
-    visibility: hidden;
-    display: none;
-}
-
-.categories {
-    text-transform: capitalize;
-    font-weight: 600;
-    font-style: italic;
-}
-
-#resumeTitle {
-    margin-top: 5em;
-}
-.resume {
-    h2 {
-        margin-bottom: 0.5em;
-        margin-top: 1.5em;
-    }
-
-    h3 {
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-    }
-}
-
-
 
 #post-list {
-    // margin-top: 2em;
+  .item-body {
+    margin-left: 1em;
+  }
 }
-
-.site-information {
-    margin-bottom: 1em;
-
-    li {
-        display: inline-block;
-    }
-}
-
-.site-nav li {
-    vertical-align: text-top;
-}
-
-#contents {
-    #post-list {
-
-        span, h1 {
-            background-color: white;
-        }
-
-        .metadata {
-            margin-bottom: 1em;
-
-            li {
-                display:inline-flex;;
-            }
-        }
-
-    }
-
-    .gallery {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-
-        .caption {
-            text-align: right;
-            position: relative;
-            top: -10px;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        .gallery-item {
-        }
-    }
-}
-
-#post-content {
-
-    .metadata {
-        ul {
-            padding-bottom: 1em;
-        }
-    }
-
-
-    span.pagetitle::after {
-        content: " / ";
-        color: red;
-    }
-}
-
-.masonry {
-    .grid-item {
-        padding: 5px;
-        overflow-y: hidden;
-        img {
-            width: 100%;
-            box-shadow: 2px 3px 2px -3px red;
-
-            &:hover {
-                box-shadow: 3px 4px 5px -6px red;
-            }
-        }
-    }
-}
-
-// xs
-@media (max-width: 768px) {
-
-}
-
-@import "highlights";
-@import "svg-icons";

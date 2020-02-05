@@ -1,39 +1,25 @@
 ---
 layout: default
 ---
-
-    <div id="post-list">
-        <script type="text/javascript">
-        var gallery_item_array = new Object(),
-            site_base_url = "{{ site.baseurl }}";
-        </script>
-
-        {% for post in site.posts %}
-
-        {% assign postid = post.title | downcase | replace: ' ', '-' | replace: '.', '' | replace: ',', '' %}
-
-        <script type="text/javascript">
-            gallery_item_array["{{postid}}"] = {
-                "features": {{ post.features | jsonify}},
-                "date": "{{ post.date | date: "%Y-%m-%d" }}"
-            };
-        </script>
-
-
-        <ul class="metadata meta-item">
-            <li class="pagetitle"><h1><a class="{{ postid }}" href="{{ post.url }}">{{ post.title }}</a></h1></li>
-            <li class="categories">
-                {{ post.categories | join: ", " }}
+<div id="post-list">
+    {% assign types = "personal, job, " | split: ", " %}
+    {% for type in types %}
+    <div class="works">
+        <h2>{{ type }} projects</h2>
+        <ul class="works-list">
+            {% assign posts = site.posts | where:"type", type %}
+            {% for post in posts %}
+            <li class="works-item">
+                <div class="item-header">
+                    <h3>{{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}</h3>
+                    <p class="stacks">{{ post.stacks | join: ", "}}</p>
+                </div>
+                <div class="item-body">
+                    {{ post.content }}
+                </div>
             </li>
-            <li>{{ post.date | date_to_string }}</li>
+            {% endfor %}
         </ul>
-        {% endfor %}
     </div>
-
-    <div class="gallery col-lg-8 col-md-8 col-sm-8 hidden-xs --trim-padding">
-        <div class="caption">
-        </div>
-        <script type="text/javascript">
-            build_gallery(gallery_item_array, '.gallery');
-        </script>
-    </div>
+    {% endfor %}
+</div>

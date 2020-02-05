@@ -4,21 +4,21 @@
 
     <body>
         <div id="contents" class="container-fluid">
-            <div class="nav-bar site-information col-md-12 col-sm-12 --trim-padding">
-                <ul class="--trim-padding col-md-6">
-                    <li class="site_title"><h1><a href="{{ site.url }}">{{ site.name }}</a></h1></li>
-                    <li class="site_information">
-                        {{ site.description }}
-                    </li>
-                </ul>
-                <ul class="site-nav col-md-6 --trim-padding">
-                    <li class="site_information"><a href="{{ site.url }}/about/">About</a></li>
-                </ul>
+            <div class="nav-bar site-information">
+                <div class="item">
+                    <h1 class="site-title">
+                        <a href="{{ site.url }}">{{ site.name }}</a>
+                    </h1>
+                </div>
+                <div class="item">
+                    {{ site.description }}
+                </div>
+                <div class="item">
+                    <a href="{{ site.footer-links.github }}">github</a>
+                </div>
             </div>
             {{ content }}
         </div>
         {% include analytics.html %}
-
-        <script type="text/javascript" src="{{ assets }}/scripts_footer.js"></script>
     </body>
 </html>
