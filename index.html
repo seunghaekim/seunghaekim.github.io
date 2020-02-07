@@ -33,6 +33,11 @@ layout: default
                         <span class="label">stacks.</span> {{ post.stacks | join: ", "}}
                     </p>
                     {% endif %}
+                    {% if post.repository %}
+                    <p class="repository">
+                        <span class="label">repository.</span> <a href="{{ post.repository }}">{{ post.repository }}</a>
+                    </p>
+                    {% endif %}
                 </div>
                 <div class="item-body">
                     {{ post.content }}
