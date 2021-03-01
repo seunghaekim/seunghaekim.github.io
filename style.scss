@@ -4,6 +4,7 @@
 // IMPORTS
 //
 
+@import url('./reset.css');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 body {
@@ -11,8 +12,16 @@ body {
   font-size: 13px;
 }
 
+#contents {
+  padding: 1em;
+}
+
 ul, ol, menu {
   padding-left: 1em;
+}
+
+ul > li {
+  margin: 0.5em 0;
 }
 
 .nav-bar {

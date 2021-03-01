@@ -2,7 +2,7 @@
 layout: default
 ---
 <div id="post-list">
-    {% assign types = "personal, job, " | split: ", " %}
+    {% assign types = "job, personal, " | split: ", " %}
     {% for type in types %}
     <div class="works">
         <h2 class="works-type">{{ type }} projects</h2>
@@ -11,33 +11,32 @@ layout: default
             {% for post in posts %}
             <li class="works-item">
                 <div class="item-header">
-                    <h3>
+                    <h3>{{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}</h3>
+                    <ul>
                         {% if post.external %}
-                        <a href="{{ post.external }}">{{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}</a>
-                        {% else %}
-                        {{ post.title }}, {{ post.date | date: "%Y-%m" }} — {% if post.date_done %}{{post.date_done | date: "%Y-%m"}}{% else %}now{% endif %}
+                        <li><span class="label">url.</span> <a href="{{post.external}}">{{post.external}}</a></li>
                         {% endif %}
-                    </h3>
-                    {% if post.description %}
-                    <p class="description">
-                        <span class="label">desc.</span> {{ post.description }}
-                    </p>
-                    {% endif %}
-                    {% if post.role %}
-                    <p class="role">
-                        <span class="label">role.</span> {{ post.role | join: ", "}}
-                    </p>
-                    {% endif %}
-                    {% if post.stacks %}
-                    <p class="stacks">
-                        <span class="label">stacks.</span> {{ post.stacks | join: ", "}}
-                    </p>
-                    {% endif %}
-                    {% if post.repository %}
-                    <p class="repository">
-                        <span class="label">repository.</span> <a href="{{ post.repository }}">{{ post.repository }}</a>
-                    </p>
-                    {% endif %}
+                        {% if post.description %}
+                        <li class="description">
+                            <span class="label">desc.</span> {{ post.description }}
+                        </li>
+                        {% endif %}
+                        {% if post.role %}
+                        <li class="role">
+                            <span class="label">role.</span> {{ post.role | join: ", "}}
+                        </li>
+                        {% endif %}
+                        {% if post.stacks %}
+                        <li class="stacks">
+                            <span class="label">stacks.</span> {{ post.stacks | join: ", "}}
+                        </li>
+                        {% endif %}
+                        {% if post.repository %}
+                        <li class="repository">
+                            <span class="label">repository.</span> <a href="{{ post.repository }}">{{ post.repository }}</a>
+                        </li>
+                        {% endif %}
+                    </ul>
                 </div>
                 <div class="item-body">
                     {{ post.content }}
