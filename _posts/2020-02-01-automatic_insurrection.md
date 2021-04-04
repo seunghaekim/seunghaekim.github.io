@@ -16,4 +16,3 @@ stacks:
 external: https://seunghaekim.github.io/automatic_insurrection/
 repository: https://github.com/seunghaekim/automatic_insurrection/
 ---
-- 급진적 정치 선전물을 자동 생성하는 [Automatic Insurrection](https://github.com/johm/automatic_insurrection) 서비스를 Javascript로 포팅
