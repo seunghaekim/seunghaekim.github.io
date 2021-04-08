@@ -15,7 +15,7 @@ stacks:
   - python
   - javascript
   - mysql
-external: http://medical.createkorea.com/
+# external: http://medical.createkorea.com/
 ---
 - PHP로 작성된 인하우스 웹프레임워크 기반의 백엔드.
 - 하나의 관리자 웹사이트에서 다양한 병원과 지점, 다국어 웹사이트를 관리할 수 있는 서비스.

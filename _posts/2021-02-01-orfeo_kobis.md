@@ -13,7 +13,7 @@ role:
 stacks:
   - laravel
   - docker
-external: https://orfeo.ode-audio.com/
+# external: https://orfeo.ode-audio.com/
 ---
 - 전체 구축 담당
 - Stage/Product 서버는 Azure에 구축
