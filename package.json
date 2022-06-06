@@ -1,7 +1,7 @@
 {
-  "name": "nta-blog",
+  "name": "seunghaekim-blog",
   "version": "6.0.0",
-  "description": "nta-blog.",
+  "description": "seunghaekim-blog",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
