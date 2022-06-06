@@ -1,13 +1,13 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "No-tech Archive",
+  "title": "seunghaekim",
   "language": "ko",
-  "home_page_url": "https://seunghaekim.github.io/nta-blog/",
-  "feed_url": "https://seunghaekim.github.io/nta-blog/feed/feed.json",
-  "description": "No-tech archive blog",
+  "home_page_url": "https://seunghaekim.github.io/",
+  "feed_url": "https://seunghaekim.github.io/feed/feed.json",
+  "description": "seunghaekim",
   "author": {
-    "name": "Your Name Here",
-    "url": "https://seunghaekim.github.io/nta-blog/about/"
+    "name": "seunghaekim",
+    "url": "https://seunghaekim.github.io/about/"
   },
   "items": [{
       "id": "https://seunghaekim.github.io/nta-blog/posts/2022-06-06-Why-you-need-Use-Cases,Interactors/",

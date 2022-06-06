@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>No-tech Archive</title>
-	<subtitle>No-tech archive blog</subtitle>
+	<title>seunghaekim</title>
+	<subtitle>seunghaekim</subtitle>
 	
 	<link href="https://seunghaekim.github.io/nta-blog/feed/feed.xml" rel="self"/>
-	<link href="https://seunghaekim.github.io/nta-blog/"/>
+	<link href="https://seunghaekim.github.io/"/>
 	<updated>2019-10-16T00:00:00Z</updated>
-	<id>https://seunghaekim.github.io/nta-blog/</id>
+	<id>https://seunghaekim.github.io/</id>
 	<author>
-		<name>Your Name Here</name>
-		<email>youremailaddress@example.com</email>
+		<name>seunghaekim</name>
+		<email>aka.seunghaekim@gmail.com</email>
 	</author>
 	
 	<entry>
