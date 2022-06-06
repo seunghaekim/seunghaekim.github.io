@@ -1,0 +1,21 @@
+{
+  "title": "No-tech Archive",
+  "url": "https://seunghaekim.github.io/nta-blog/",
+  "language": "ko",
+  "description": "No-tech archive blog",
+  "feed": {
+    "subtitle": "No-tech archive blog",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://seunghaekim.github.io/nta-blog/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://seunghaekim.github.io/nta-blog/feed/feed.json"
+  },
+  "author": {
+    "name": "Your Name Here",
+    "email": "youremailaddress@example.com",
+    "url": "https://seunghaekim.github.io/nta-blog/about/"
+  }
+}
